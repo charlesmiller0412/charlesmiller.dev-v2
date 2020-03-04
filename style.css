@@ -13,10 +13,7 @@ Dark Blue: #1D334D
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-}
-
-hr {
-    color: rgb(250, 250, 250);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,16 +27,27 @@ body {
     background-color: rgb(250, 250, 250);
 }
 
+p, h4 {
+    font-family: "Squada One", sans-serif;
+}
+
+h4 {
+    font-size: 1.7em;
+}
+
 .header {
     height: 100vh;
     background-image: linear-gradient(
         to right bottom, 
         rgba(48, 85, 128, .5), 
         rgba(57, 107, 163, 0.5)), 
-        url(../img/jumbo.jpg);
+        url(../img/nat-6.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
 
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0% 100%);
 }
@@ -57,11 +65,29 @@ nav {
     text-align: end;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 
 .bannerBtn {
     justify-content: center;
     color: white;
+}
+
+.projectBanner {
+    display: flexbox;
+    margin: 0;
+    padding: 0;
+    font-family: "Squada One", sans-serif;
+    background-color: #305580ab;
+    color: rgb(250, 250, 250);
+    text-align: end;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.fas {
+    color: #ff9900;
 }
 
 .bannerBtn a {
@@ -72,13 +98,29 @@ nav {
 }
 
 .bannerBtn a:hover {
-    background-color: #1D334D;
+    color: #8BA9CC;
+    animation: hover 1.2s ease-in;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hover{
+    0% {
+        color: rgb(250, 250, 250);
+    }
+
+    50% {
+        color: #ff9900;
+    }
+
+    100% {
+        color: rgb(250, 250, 250);
+    }
 }
 
 .logo-box {
     position: absolute;
-    top: 80px;
-    left: 40px
+    top: 7%;
+    left: 3%;
 }
 
 .logo {
@@ -99,6 +141,7 @@ nav {
 
     backface-visibility: hidden;
     margin-bottom: 60px;
+    overflow: hidden;
 }
 
 .heading-primary-main {
@@ -106,6 +149,7 @@ nav {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 25px;
+    overflow: hidden;
 
     animation-name: moveInTop;
     animation-duration: 1s;
@@ -124,6 +168,7 @@ nav {
     font-weight: 400;
     letter-spacing: 25px;
     margin-bottom: 25px;
+    overflow: hidden;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -137,6 +182,8 @@ nav {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
+    overflow: hidden;
+
     animation: moveInRight 1.5s ease-out;
     animation-delay: 1.5s;
     animation-fill-mode: backwards;
@@ -276,9 +323,11 @@ h3 {
     text-align: left;
     padding-top: 50px;
     font-family: 'Syncopate', sans-serif;
+    color: #ff9900;
 }
 
 hr {
+    color: rgb(250, 250, 250);
     margin-left: 100px;
     margin-right: 100px;
     border-color: rgb(250, 250, 250);
@@ -322,7 +371,8 @@ hr {
     padding-right: 50px;
 }
 .languages p {
-    font-size: 1.3vw;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -336,8 +386,13 @@ hr {
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #8BA9CC;
-    color: rgb(250, 250, 250)
+    background-color: #ff9900;
+    color: rgb(250, 250, 250);
+}
+
+.software i,
+.software h3 {
+    color: rgb(250, 250, 250);
 }
 
 .software li,
@@ -345,6 +400,7 @@ hr {
     display: inline;
     margin-left: 50px;
     margin-right: 50px;
+    font-size: 20px;
 }
 
 .skills {
@@ -356,71 +412,205 @@ hr {
     height: 100%;
 }
 
+
+/*                  PROJECTS SECTION            */
 .projects {
+    display: flexbox;
+    align-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
     height: 100%;
-    background-color: #305580;
-    color: rgb(250, 250, 250)
+    color: rgb(250, 250, 250);
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba(48, 85, 128, .5), 
+        rgba(57, 107, 163, 0.5)), 
+        url(../img/jumbo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .projects img {
-    width: 60%;
-    margin-top: 50px;
-}
-
-.projects img:hover {
-    transform: scale(1.2);
-    transition-duration: 1s;
-    box-shadow: 1px 1px 10px 5px #8BA9CC;
-    transition-timing-function: ease;
+    align-self: center;
+    width: 80%;
+    margin: 20px 0px 5px 0px;
 }
 
 .designRow {
     display: flex;
+    justify-content: center;
 }
 
-.designImg {
-    float: left;
+.card {
+    position: relative;
+    width: 15%;
+    justify-content: start center;
+    height: 400px;
+    margin: 30px 40px 30px 40px;
+    border: rgba(48, 85, 128, .5);
 }
 
-.contact,
+.card hr {
+    margin: 0px 30px 0px 30px;
+    border-color: #305580;
+}
+
+.card h5 {
+    font-family: "Lato", sans-serif;
+    color: #1D334D;
+}
+
+.card h6 {
+    color: #1D334D;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.card p {
+    text-align: left;
+    padding: 0 20px 0 20px;
+    font-size: 70%; 
+    font-family: "Lato", sans-serif;
+    color: #1D334D;
+    position: relative;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+
+@keyframes glow {
+    from {
+
+    }
+  
+    to {
+        box-shadow: 1px 1px 20px 15px #8BA9CC;
+    }
+  }
+  
+.card:hover {
+    animation-duration: .7s;
+    animation-name: glow;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+@media (max-width: 992px) {
+    .designRow {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .card {
+        background-color: #305580;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        height: fit-content;
+    }
+    .card p,
+    .card h5 {
+        color: rgb(250, 250, 250);
+    }
+    .card h6 {
+        position: relative;
+        color: rgb(250, 250, 250);
+    }
+    .card hr {
+        border-color: rgb(250, 250, 250);
+    }
+    .card:hover {
+        animation: none;
+    }
+    .card:nth-of-type(2n) {
+        background-color: #ff9900;
+    }
+}
+
+
+
+
+
+/*          CONTACT SECTION             */
+.contact {
+    color: #305580;   
+    background-color: rgb(250, 250, 250);
+    height: inherit;
+    margin: 50px 0 0 0;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact hr {
+    margin: 0px 100px 0px 100px;
+    padding-bottom: 25px;
+    border-color: #305580;
+}
+
 .contact a:link,
 .contact a:visited {
-    color: rgb(250, 250, 250);    
-    background-color: #657B95;
+    color: rgb(250, 250, 250);
+    text-decoration: none;
 }
 
-.jumbotron hr {
-    border-color: #1D334D;
+.contactOptions {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
 }
 
-.jumbotron {
-    padding: 0;
-    padding-top: 25x;
-    padding-bottom: 50px;
-    margin: 0;
+.option {
+    display: flex;
+    justify-content: center;
+    color: rgb(250, 250, 250);
+    background-color:#8BA9CC;
+    border-radius: 20px;
+    padding: 10px 20px;
 }
 
-.jumbotron .btn {
-    margin: 20px;
+
+@keyframes optionHover {
+    0% {
+        background-color: linear-gradient(rgb(250, 250, 250), #305580);
+    }
+    100% {
+        background-color: linear-gradient(#305580, rgb(250, 250, 250));
+    }
 }
 
 .btn {
-    background-color: #657B95; 
+    background-color: #8BA9CC; 
     color: white;
+    overflow: hidden;
 }
 
 footer {
     background-color: #305580;
-    color:rgb(250, 250, 250);
+    color: rgb(250, 250, 250);
     text-align: center;
     margin: 0;
     padding: 20px;
 }
 
+footer img {
+    width: 8%;
+}
+
 @media (max-width: 992px) {
+
+    .projects{
+        background-image: none;
+        background-color: #1D334D;
+        padding-bottom: 0;
+    }
 
     h3 {
         margin-left: 10px;
@@ -435,40 +625,15 @@ footer {
     }
 
     .banner {
-        text-align: center;
+        display: flex;
         width: 100%;
+        justify-content: space-evenly;
     }
 
     .bannerBtn a {
         font-size: 1.2em;
         padding: 5px;
     }
-
-    /* .banner {
-        display: flexbox;
-        font-family: "Squada One", sans-serif;
-        background-color: #305580ab;
-        color: rgb(250, 250, 250);
-        text-align: end;
-        position: fixed;
-        width: 100%;
-    }
-    
-    .bannerBtn {
-        justify-content: center;
-        color: white;
-    }
-    
-    .bannerBtn a {
-        color: rgb(250, 250, 250);
-        text-decoration: none;
-        font-size: 1.5em;
-        padding: 10px;
-    }
-    
-    .bannerBtn a:hover {
-        background-color: #1D334D;
-    } */
 
     .aboutBox {
         height: auto;
@@ -488,6 +653,12 @@ footer {
         height: inherit;
         text-align: center;
         padding-bottom: 50px;
+    }
+
+    .contact hr {
+        margin-left: 0;
+        margin-right: 50px;
+        padding-bottom: 40px;
     }
 
     .languages li {
@@ -529,14 +700,16 @@ footer {
         margin: 20px;
     }
 
-    .projects {
-        padding-bottom: 0;
-        height: 100%;
+    .contactOptions {
+        display: inline-block;
+        width: 100%;
     }
 
-    .projects img {
-        display: flexbox;
-        width: 80%;
+    .option {
+        display: flex;
+        color: #1D334D;
+        border-radius: 0;
+        justify-content: space-between;
     }
 
     .form-row {
@@ -548,7 +721,20 @@ footer {
         padding-left: 30px;
         padding-right: 30px;
     }
+
+    footer img {
+        width: 20%;
+    }
     .footer {
         display: block;
     }
+}
+
+
+/*              PROJECTS.HTML BEGINS                 */
+
+.projects .banner{
+    position: fixed;
+    top: 0;
+    left: 0;
 }
