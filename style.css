@@ -156,10 +156,6 @@ nav {
     animation-delay: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards;
-
-    /* animation-delay: 3s; 
-    animation-iteration-count: 3;
-    */
 }
 
 .heading-secondary-main {
@@ -194,10 +190,6 @@ nav {
         opacity: 0;
         transform: translateX(-100px);
     }
-
-    /* 60% {
-        transform: rotate(25deg);
-    } */
 
     80% {
         transform: translateX(10px);
@@ -403,6 +395,10 @@ hr {
     font-size: 20px;
 }
 
+.software ul{
+    padding: 10px 0 10px 0;
+}
+
 .skills {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -413,7 +409,223 @@ hr {
 }
 
 
-/*                  PROJECTS SECTION            */
+
+
+
+/*          CONTACT SECTION             */
+.contact {
+    color: #305580;   
+    background-color: #ff9900;
+    height: inherit;
+    padding: 50px 0 0 0;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact hr {
+    margin: 0px 100px 0px 100px;
+    padding-bottom: 25px;
+    border-color: #305580;
+}
+
+.contact a:link,
+.contact a:visited {
+    color: rgb(250, 250, 250);
+    text-decoration: none;
+}
+
+.contactOptions {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.contact i,
+.contact h3 {
+    color: rgb(250, 250, 250);
+}
+
+.contact hr {
+    border-color: rgb(250, 250, 250);
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    color: rgb(250, 250, 250);
+    background-color:#8BA9CC;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+
+@keyframes optionHover {
+    0% {
+        background-color: linear-gradient(rgb(250, 250, 250), #305580);
+    }
+    100% {
+        background-color: linear-gradient(#305580, rgb(250, 250, 250));
+    }
+}
+
+.btn {
+    background-color: #8BA9CC; 
+    color: rgb(250, 250, 250);
+    overflow: hidden;
+}
+
+footer {
+    background-color: #305580;
+    color: rgb(250, 250, 250);
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+footer img {
+    width: 8%;
+}
+
+@media (max-width: 992px) {
+
+    .projects{
+        background-image: none;
+        background-color: #1D334D;
+        padding-bottom: 0;
+    }
+
+    h3 {
+        margin-left: 10px;
+        padding-bottom: 10px;
+        margin-right: 50px;
+    }
+
+    hr {
+        margin-left: 0;
+        margin-right: 50px;
+        padding-bottom: 40px;
+    }
+
+    .banner {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .bannerBtn a {
+        font-size: 1.2em;
+        padding: 5px;
+    }
+
+    .aboutBox {
+        height: auto;
+        font-size: 2vw;
+    }
+    
+    .aboutBox p {
+        margin: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .languagesMobile {
+        background-color: #305580; 
+        color: rgb(250, 250, 250);
+        height: inherit;
+        padding: 50px 0 50px 0;
+        text-align: center;
+    }
+
+    .languagesMobile ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .languagesMobile li {
+        width: 33%;
+    }
+
+    .languagesMobile p {
+        padding: 10px 0 10px 0;
+        font-size: .7em;
+    }
+
+    .contact hr {
+        margin-left: 0;
+        margin-right: 50px;
+        padding-bottom: 40px;
+    }
+
+    .softwareMobile {
+        background-color: #8BA9CC;
+        color: rgb(250, 250, 250);
+        height: inherit;
+        text-align: center;
+        padding: 50px 0 50px 0;
+    }
+
+    .softwareMobile h3,
+    .softwareMobile i {
+        color: rgb(250, 250, 250);
+    }
+
+    .softwareMobile ul {
+        margin: 5px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .softwareMobile li {
+        width: 20%;
+        margin: 10px;
+    }
+
+    .skillsMobile {
+        padding-top: 50px;
+        background-color: #1D334D;
+        color: rgb(250, 250, 250);
+        height: inherit;
+        padding-bottom: 50px;
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .skillsMobile ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .skillsMobile li {
+        display: inline-block;
+        justify-content: center;
+        margin: 20px;
+        width: 50%;
+    }
+
+    .contactOptions {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .option {
+        display: flex;
+        color: #1D334D;
+        border-radius: 0;
+        justify-content: space-between;
+    }
+
+    footer img {
+        width: 20%;
+    }
+    footer {
+        background-color: #8BA9CC;
+        display: block;
+    }
+}
+
+
+/****************************Projects.html*****************************/
 .projects {
     display: flexbox;
     align-content: center;
@@ -533,208 +745,4 @@ hr {
     .card:nth-of-type(2n) {
         background-color: #ff9900;
     }
-}
-
-
-
-
-
-/*          CONTACT SECTION             */
-.contact {
-    color: #305580;   
-    background-color: rgb(250, 250, 250);
-    height: inherit;
-    margin: 50px 0 0 0;
-    text-align: center;
-    padding-bottom: 50px;
-}
-
-.contact hr {
-    margin: 0px 100px 0px 100px;
-    padding-bottom: 25px;
-    border-color: #305580;
-}
-
-.contact a:link,
-.contact a:visited {
-    color: rgb(250, 250, 250);
-    text-decoration: none;
-}
-
-.contactOptions {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px 0;
-}
-
-.option {
-    display: flex;
-    justify-content: center;
-    color: rgb(250, 250, 250);
-    background-color:#8BA9CC;
-    border-radius: 20px;
-    padding: 10px 20px;
-}
-
-
-@keyframes optionHover {
-    0% {
-        background-color: linear-gradient(rgb(250, 250, 250), #305580);
-    }
-    100% {
-        background-color: linear-gradient(#305580, rgb(250, 250, 250));
-    }
-}
-
-.btn {
-    background-color: #8BA9CC; 
-    color: white;
-    overflow: hidden;
-}
-
-footer {
-    background-color: #305580;
-    color: rgb(250, 250, 250);
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-}
-
-footer img {
-    width: 8%;
-}
-
-@media (max-width: 992px) {
-
-    .projects{
-        background-image: none;
-        background-color: #1D334D;
-        padding-bottom: 0;
-    }
-
-    h3 {
-        margin-left: 10px;
-        padding-bottom: 10px;
-        margin-right: 50px;
-    }
-
-    hr {
-        margin-left: 0;
-        margin-right: 50px;
-        padding-bottom: 40px;
-    }
-
-    .banner {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-    .bannerBtn a {
-        font-size: 1.2em;
-        padding: 5px;
-    }
-
-    .aboutBox {
-        height: auto;
-        font-size: 2vw;
-    }
-    
-    .aboutBox p {
-        margin: 0;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .languages {
-        font-size: 3vw;
-        background-color: #305580; 
-        color: rgb(250, 250, 250);
-        height: inherit;
-        text-align: center;
-        padding-bottom: 50px;
-    }
-
-    .contact hr {
-        margin-left: 0;
-        margin-right: 50px;
-        padding-bottom: 40px;
-    }
-
-    .languages li {
-        margin: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .software {
-        background-color: #8BA9CC;
-        color: rgb(250, 250, 250);
-        height: inherit;
-        text-align: center;
-        padding-bottom: 50px;
-        font-size: 3vw;
-    }
-
-    .software li {
-        margin: 5px;
-    }
-
-    .skillsMobile {
-        padding-top: 50px;
-        background-color: #1D334D;
-        color: rgb(250, 250, 250);
-        height: inherit;
-        padding-bottom: 50px;
-        font-size: 3vw;
-        text-align: center;
-    }
-
-    .skillsMobile ul {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .skillsMobile li {
-        display: inline;
-        margin: 20px;
-    }
-
-    .contactOptions {
-        display: inline-block;
-        width: 100%;
-    }
-
-    .option {
-        display: flex;
-        color: #1D334D;
-        border-radius: 0;
-        justify-content: space-between;
-    }
-
-    .form-row {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .comments {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    footer img {
-        width: 20%;
-    }
-    .footer {
-        display: block;
-    }
-}
-
-
-/*              PROJECTS.HTML BEGINS                 */
-
-.projects .banner{
-    position: fixed;
-    top: 0;
-    left: 0;
 }
