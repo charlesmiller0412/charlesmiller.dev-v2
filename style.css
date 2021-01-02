@@ -6,6 +6,7 @@ Gray: #657B95
 Light Blue: #4E89CC 
 Blueish Gray: #8BA9CC 
 Dark Blue: #1D334D
+Orange: #ff9900
 */
 
 * {
@@ -37,16 +38,6 @@ h4 {
 
 .header {
     height: 100vh;
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba(48, 85, 128, .5), 
-        rgba(57, 107, 163, 0.5)), 
-        url(../img/nat-6.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow: hidden;
 
     clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0% 100%);
@@ -71,19 +62,7 @@ nav {
 .bannerBtn {
     justify-content: center;
     color: white;
-}
-
-.projectBanner {
-    display: flexbox;
-    margin: 0;
-    padding: 0;
-    font-family: "Squada One", sans-serif;
-    background-color: #305580ab;
-    color: rgb(250, 250, 250);
-    text-align: end;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
+    overflow: hidden;
 }
 
 .fas {
@@ -133,6 +112,7 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    overflow: hidden;
 }
 
 .heading-primary {
@@ -141,7 +121,6 @@ nav {
 
     backface-visibility: hidden;
     margin-bottom: 60px;
-    overflow: hidden;
 }
 
 .heading-primary-main {
@@ -149,7 +128,6 @@ nav {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 25px;
-    overflow: hidden;
 
     animation-name: moveInTop;
     animation-duration: 1s;
@@ -164,7 +142,6 @@ nav {
     font-weight: 400;
     letter-spacing: 25px;
     margin-bottom: 25px;
-    overflow: hidden;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -178,7 +155,6 @@ nav {
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 17.4px;
-    overflow: hidden;
 
     animation: moveInRight 1.5s ease-out;
     animation-delay: 1.5s;
@@ -395,7 +371,8 @@ hr {
     font-size: 20px;
 }
 
-.software ul{
+.software ul,
+.skills ul {
     padding: 10px 0 10px 0;
 }
 
@@ -415,7 +392,7 @@ hr {
 /*          CONTACT SECTION             */
 .contact {
     color: #305580;   
-    background-color: #ff9900;
+    background-color: rgb(250, 250, 250);
     height: inherit;
     padding: 50px 0 0 0;
     text-align: center;
@@ -440,13 +417,13 @@ hr {
     padding: 50px 0;
 }
 
-.contact i,
+
 .contact h3 {
-    color: rgb(250, 250, 250);
+    color: #ff9900;
 }
 
-.contact hr {
-    border-color: rgb(250, 250, 250);
+.formBtns {
+    padding-top: 3rem;
 }
 
 .option {
@@ -457,7 +434,6 @@ hr {
     border-radius: 20px;
     padding: 10px 20px;
 }
-
 
 @keyframes optionHover {
     0% {
@@ -486,13 +462,39 @@ footer img {
     width: 8%;
 }
 
-@media (max-width: 992px) {
+/* --------------------Thank you page after form submit--------------------*/
 
-    .projects{
-        background-image: none;
-        background-color: #1D334D;
-        padding-bottom: 0;
-    }
+.thanks main{
+    text-align: center;
+    padding: 10rem;
+}
+
+.thanksLogo {
+    width: 20rem;
+    height: auto;
+    margin: 2rem auto;
+}
+
+.thanks h3 {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.thanks footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.thanks h5 a {
+    color: #ff9900;
+}
+
+
+
+@media (max-width: 992px) {
 
     h3 {
         margin-left: 10px;
@@ -608,18 +610,28 @@ footer img {
         width: 100%;
     }
 
+    .contact {
+        background-color: #ff9900;
+
+    }
     .option {
         display: flex;
         color: #1D334D;
         border-radius: 0;
+        background-color: #ff9900;
         justify-content: space-between;
+    }
+
+    .contact h3,
+    .contact i {
+        color: #1D334D;
     }
 
     footer img {
         width: 20%;
     }
     footer {
-        background-color: #8BA9CC;
+        background-color: #305580;
         display: block;
     }
 }
@@ -634,15 +646,7 @@ footer img {
     text-align: center;
     height: 100%;
     color: rgb(250, 250, 250);
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba(48, 85, 128, .5), 
-        rgba(57, 107, 163, 0.5)), 
-        url(../img/jumbo.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: #1D334D;
 }
 
 .projects img {
@@ -663,6 +667,16 @@ footer img {
     height: 400px;
     margin: 30px 40px 30px 40px;
     border: rgba(48, 85, 128, .5);
+}
+.apps {
+    background-color: #4E89CC;
+}
+.graphics {
+    background-color: #ff9900;
+}
+
+.graphics img {
+    height: 19rem;
 }
 
 .card hr {
@@ -693,6 +707,7 @@ footer img {
 
 .card a {
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 
@@ -714,6 +729,7 @@ footer img {
   }
 
 @media (max-width: 992px) {
+
     .designRow {
         display: block;
         width: 100%;
@@ -728,13 +744,19 @@ footer img {
         border-radius: 0;
         height: fit-content;
     }
-    .card p,
+
     .card h5 {
         color: rgb(250, 250, 250);
+    }
+
+    .card p {
+        color: rgb(250, 250, 250);
+        font-size: 1em;
     }
     .card h6 {
         position: relative;
         color: rgb(250, 250, 250);
+        font-size: .8em;
     }
     .card hr {
         border-color: rgb(250, 250, 250);

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Portfolio for and aspiring web developer.">
+        <meta name="description" content="Portfolio for an aspiring web developer.">
         <meta name="keywords" content="Charles Miller, Miller, Web, Design, Developer, Develop, Designs">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="google-site-verification" content="sozXL9RnkBgq1QrqC1BHdOO8w2-TipLAI-PWi08iIl0" />
@@ -17,10 +17,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" type="image/png" href="img/tabLogo.png">
         
-    </head>
-        
-        
-        <title>Miller Design | Front-End Web Developer</title>
+        <title>Miller Design | Full-Stack Web Developer</title>
     </head>
     <body>
         <nav class="banner">
@@ -33,7 +30,11 @@
                 <a href="#section-contact">Contact</a>
             </div>
         </nav>
-        <header class="header">
+        <header class="header" rel="prefetch" style="background-image: linear-gradient(to right bottom, 
+            rgba(48, 85, 128, .5), 
+            rgba(57, 107, 163, 0.5)), url(../img/nat-6.jpg);
+            background-size: cover; background-position: center; position: relative; background-repeat: no-repeat;
+            background-attachment: fixed;">
             <nav class="banner">
                 <div class="bannerBtn">
                     <a href="#section-about">About</a>
@@ -215,7 +216,7 @@
             </section>
 
 <!--    contact     -->
-             <section id="section-contact">
+            <section id="section-contact">
                 <div class="contact">
                     <i class="fas fa-id-card fa-4x"></i>
                     <h3>Contact Me</h3>
@@ -234,7 +235,7 @@
                             <i class="fab fa-facebook fa-2x pr-2"></i><a href="http://www.facebook.com/charlesmiller0412">Meet me on Facebook</a><br>
                         </div>
                     </div>
-                    <!-- <form class="col-lg-8 px-0 m-auto" method="POST" name="contactform" action="contactform.php">
+                    <form class="col-lg-8 px-0 m-auto" method="post" name="contactform" action="form-to-email.php">
                         <div>
                             <div class="form-row py-3">
                                 <div class="col-4">
@@ -249,7 +250,7 @@
                             </div>
                             <div class="form-row pb-3">
                                 <div class="col-7">
-                                    <input type="email" class="form-control" placeholder="E-Mail address" required>
+                                    <input type="email" name="email" class="form-control" placeholder="E-Mail address" required>
                                 </div>
                                 <div class="col-5">
                                     <input type="tel" name="phone" class="form-control" placeholder="Phone number (Optional)">
@@ -257,20 +258,20 @@
                             </div>
                             <div class="comments">
                                 <textarea class="form-control" name="message" aria-label="With textarea" placeholder="What's your message?"></textarea>
-                                <div class="text-center">
+                            </div>
+                            <div class="text-center formBtns">
                                     <input type="reset" class="btn">
-                                    <input type="submit" class="btn" formtarget="_blank" formmethod="post" formaction="http://webdevbasics.net/scripts/demo.php">
-                                </div>
+                                    <input type="submit" name="submit" value="submit" class="btn">
                             </div>
                         </div>
-                    </form> -->
+                    </form>
                 </div>
             </section>
             <!-- end contact -->
         </main>
 
         <footer>
-                <img src="img/mDnew.png">
+                <img src="img/mDnew.png" alt="Footer logo">
                 <p><br><br>Copyright &copy; Charles Miller Designs. All rights reserved.</p>
         </footer>
 
